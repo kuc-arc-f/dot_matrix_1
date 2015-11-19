@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="http://kuc-arc-f.com/bootstrap-3.1.0/css/bootstrap.min.css" rel="stylesheet">
+    <script src="jquery-1.8.0.js"></script>
+    <script src="mqttws31.js"></script>
+    <script src="app.js"></script>
+    <script src="http://kuc-arc-f.com/bootstrap-3.1.0/js/bootstrap.min.js"></script>
+  </head>
+  <body style="background-color: #E1E1E1;">
+    <form id="form1">
+  <div class="container" style="background-color: #FFF; margin-top: 0px ;">
+    <h1 style="color : gray;">MQTT sample (LED dot matrix)</h1>
+    <h3 style="color:green;">Local MQTT Server</h3>
+    <br />
+    <div class="form-group">
+      <label class="col-sm-2">message : </label>
+      <div class="col-sm-9">
+      <input type="text"  maxlength="20" id="id-text" value=""></input><br />
+      </div>
+    </div>
+    <br />
+    <div class="form-group">
+      <div class="col-sm-9">
+		<a href="#" id="id-a-on"  >
+		<button class="btn btn-primary btn-lg">Pub</button>
+		</a>
+      </div>
+    </div>
+    <hr style="margin-top: 100px; margin-bottom:300px;" />
+  </div>
+    </form>
+  </body>
+</html>
