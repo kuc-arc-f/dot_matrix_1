@@ -10,7 +10,7 @@ import com_mqttPub
 #define
 
 mMaxSend=100
-mMaxOne =18
+mMaxOne =16
 
 #com_sendString
 class sendStringClass:

@@ -8,7 +8,7 @@ import com_news
 import com_mqttPub
 import com_sendString
  
-mTopic="item-1128A/device-1/matrix-1"
+mTopic="item-kuc-arc-f/device-1/relay-1"
 
 mTimeMax=15
 mMaxTitle=10
@@ -38,6 +38,7 @@ if __name__ == "__main__":
 				for item in items:
 					lst=clsSend.get_List(item["title"]  )
 					proc_pub(lst)
+					time.sleep(2.0)
 			except:
 				print "--------------------------------------------"
 				print traceback.format_exc(sys.exc_info()[2])

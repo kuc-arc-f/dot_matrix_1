@@ -21,7 +21,9 @@ class mqttPubClass:
 		if( len(sPay) > 20 ):
 			sPay=sPay[0:20]
 		if( len(sPay) > 10 ):
-			iAdd=6;
+			#iAdd=6;
+			iAdd=(len(sPay) * 1000) * 0.5
+			iAdd=iAdd / 1000
 		print("sLen=")
 		print(len(sPay))
 		publish.single(topic=sTopic, payload=sPay, hostname=clsConst.mMQTT_HostName , port=clsConst.mMQTT_Port )
