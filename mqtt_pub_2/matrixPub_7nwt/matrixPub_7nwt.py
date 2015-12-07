@@ -18,6 +18,7 @@ mTopic="item-kuc-arc-f/device-1/relay-1"
 
 mTimeMax=15
 mMaxTitle=10
+#nCountNew=0
 
 mTyp_WDAT =1
 mTyp_TIME =2
@@ -41,7 +42,7 @@ if __name__ == "__main__":
 		iSpan = tmSpan.total_seconds()
 		time.sleep(1.0)
 		sTime = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-		sHHMM = datetime.now().strftime("%H:%M")
+		#sHHMM = datetime.now().strftime("%H:%M")
 		print("time=" +sTime)
 		if iSpan > mTimeMax:
 			tmBef = datetime.now()
@@ -49,6 +50,7 @@ if __name__ == "__main__":
 				clsNews= com_news.newsClass()
 				items = clsNews.get_newsData( mMaxTitle )
 				for item in items:
+					sHHMM = datetime.now().strftime("%H:%M")
 					clsPub.send_pubw(sHHMM ,mTopic)
 					time.sleep(2.0)
 					clsPub.get_sendWdata("Fukuoka", mTopic)
